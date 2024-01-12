@@ -1,6 +1,8 @@
 ### Hi I'm Tae Woo PARK 👋
 
-<img src="https://img.shields.io/badge/Python?style=social&logo=appveyor&logoColor=3776AB"/>
+	
+
+<img alt="SASS" src ="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>
 
 <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=Android&logoColor=white"/>
 
