@@ -1,4 +1,4 @@
-### Hi I'm Tae WOO PARK 👋
+### Hi I'm Tae Woo PARK 👋
 
 <!--
 **Park-taewoo/Park-taewoo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
