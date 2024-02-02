@@ -24,9 +24,10 @@ def solve():
             r = r - dr[move_p]
             c = c - dc[move_p]
             move_p +=1
+            move_p = move_p % 4
             r = r + dr[move_p]
             c = c + dc[move_p]            
-            move_p= move_p% 4
+
     
     return arr
         
