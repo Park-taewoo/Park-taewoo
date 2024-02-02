@@ -5,9 +5,7 @@ def solve():
     arr = [[0]*N for _ in range(N)]
     cnt = 0
     move_p = 0
-    while 1:
-        if cnt == N**2:
-            break
+    while cnt<N**2:
         try:
             if arr[r][c] != 0:
                 r = r - dr[move_p]
