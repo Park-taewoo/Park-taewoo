@@ -38,8 +38,8 @@ print(count)
 #3번 각 위치에 맞게 넣어주기
 sorted_arr = [None] * N
 for i in range(N):
-    print([arr[i]])
+    print([arr[i]]) #0 2
     #arr[i] 가 어디에 들어가는지 확인하고 넣어주기
-    count[arr[i]] -= 1
+    count[arr[i]] -= 1  
     sorted_arr[count[arr[i]]] = arr[i]
 print(sorted_arr)

@@ -3,6 +3,7 @@ for tc in range(T):
     N=int(input())
     arr=[list(map(int,input())) for _ in range(N)]
     cnt =0
+    print(arr)
     li =[]
     for i in range(N):
         for j in range(N):
