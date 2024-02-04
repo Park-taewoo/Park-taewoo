@@ -5,7 +5,9 @@ def solve():
     arr = [[0]*N for _ in range(N)]
     cnt = 0
     move_p = 0
-    while cnt<N**2:
+    while 1:
+        if cnt == N**2:
+            break
         try:
             if arr[r][c] != 0:
                 r = r - dr[move_p]
@@ -22,19 +24,13 @@ def solve():
             r = r - dr[move_p]
             c = c - dc[move_p]
             move_p +=1
-            move_p = move_p % 4
+            move_p= move_p% 4
             r = r + dr[move_p]
             c = c + dc[move_p]            
 
     
     return arr
-        
-    
-    
-
-
-
-
+              
 T = int(input())
 for i in range(1, T + 1):
     N = int(input())
