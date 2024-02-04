@@ -22,6 +22,7 @@ arr = [4,4,1,3,2,7,8,1,4,5,6,9,10]
 print(arr)
 K=10
 N=len(arr)
+print(N)
 #횟수를 세기 위한 배열
 count = [0]*(K+1)
 for i in range(N):
@@ -37,6 +38,7 @@ print(count)
 #3번 각 위치에 맞게 넣어주기
 sorted_arr = [None] * N
 for i in range(N):
+    print([arr[i]])
     #arr[i] 가 어디에 들어가는지 확인하고 넣어주기
     count[arr[i]] -= 1
     sorted_arr[count[arr[i]]] = arr[i]

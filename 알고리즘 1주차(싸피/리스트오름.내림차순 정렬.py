@@ -1,6 +1,6 @@
 N=6
 arr = [7, 2, 5, 3, 1, 4]
-
+#버블정렬
 # for i : N-1 -> 1, 정렬할 구간의 마지막 인덱스
 def asc(arr,N):
     for i in range(N-1,0,-1):
@@ -16,6 +16,7 @@ def dec(arr,N):
          if arr[j] < arr[j+1]: #내림차순은 작은 수를 오른쪽으로
              arr[j], arr[j+1] = arr[j+1], arr[j]
 
-
+asc(arr,N)
+print(arr)
 dec(arr,N)
 print(arr)

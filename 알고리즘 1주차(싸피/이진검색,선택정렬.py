@@ -59,14 +59,14 @@ def binary_search2(start,end,key):
     #재귀가 더이상 호출되지 않는 조건 : 못찾았을떄
     if start > end :
         return False
-    middle = (strat+end)//2
-    if arr[middle]==key
+    middle = (start+end)//2
+    if arr[middle]==key:
         return True
     #못찾았으면 탐색 범위 재설정해서 재귀 호출
     elif arr[middle]>key: # 중간값 기준 앞부분만 재 탐색
         return binary_search2(start,middle-1,key)
     else: #뒷 부분만 재 탐색
-        return binary_search2(middl1e+1,end,key)
+        return binary_search2(middle+1,end,key)
 
 
 arr = [2,4,7,9,11,19,23]
