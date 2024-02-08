@@ -13,4 +13,4 @@ for tc in range(1,T+1):
             cnt = 0
     print(f'#{tc} {max_num}')
 
-#강사님 ver
+

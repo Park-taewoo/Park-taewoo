@@ -1,2 +1,2 @@
-a=[None]*10
-print(a)
+true_sdoku = [x for x in range(0,10)]
+print(true_sdoku)
