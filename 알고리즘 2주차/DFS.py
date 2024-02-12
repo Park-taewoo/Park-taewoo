@@ -1,9 +1,10 @@
 #정점(노드),정점들을 잇는 간선(엣지,Edge)
 # 7 8 (노드 최대번호,간선개수)
-# 1 2 1 3 2 4 2 5 4 6 5 6 6 7 3 7
+# 1 3 1 2 2 4 2 5 4 6 5 6 6 7 3 7
 #1. 인접 리스트에 저장하기
 V, E =map(int,input().split())
 data=list(map(int,input().split()))
+
 g = [[] for _ in range(V+1)]
 for i in range(0,E*2,2):
     g[data[i]].append(data[i+1])
