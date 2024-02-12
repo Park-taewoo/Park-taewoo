@@ -11,5 +11,6 @@ for tc in range(1, T + 1):
                 memo[n][r] = memo[n-1][r-1] + memo[n-1][r]
  
     print(f'#{tc}')
+    print(*memo)
     for n in range(N):
         print(*memo[n][:n+1])
