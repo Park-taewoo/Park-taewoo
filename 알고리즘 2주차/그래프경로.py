@@ -16,17 +16,19 @@ def solve(start):
 T = int(input())
 for tc in range(1,T+1):
     V, E = map(int, input().split())
+    
     lst = [list(map(int, input().split())) for _ in range(E)]
-    adj = [[0]*(V+1) for _ in range(V+1)]
     data = []
+    adj = [[0]*(V+1) for _ in range(V+1)]
     for a in lst:
         data.append(a[0])
         data.append(a[1])
+        
     S, G = map(int, input().split())
 
     for i in range(0,E*2,2):
         adj[data[i]][data[i+1]] = 1
-        adj[data[i+1]][data[i]] = 1
+
     
     result = solve(S)
     if result[G] == 1:
