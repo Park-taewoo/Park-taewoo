@@ -11,6 +11,7 @@ for i in range(0, (V - 1) * 2, 2):
         g[data[i]][0] = data[i + 1]
     else:  # 왼쪽 자식에 대한 정보를 이미 가지고 있음
         g[data[i]][1] = data[i + 1]
+print(g)
 for row in g:
     print(row)
 

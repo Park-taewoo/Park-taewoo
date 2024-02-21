@@ -6,7 +6,7 @@ def in_order(v):
     in_order(v * 2)  # 왼쪽
     tree[v] = cnt
     cnt += 1
-    in_order(v * 2 + 1)  #
+    in_order(v * 2 + 1)  #오른쪽
 
 
 T = int(input())
