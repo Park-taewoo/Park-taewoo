@@ -1,4 +1,1 @@
-a=10
-b=str(a)
-for i in b:
-    print(i*2)
+print(3%10)

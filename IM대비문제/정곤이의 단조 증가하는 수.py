@@ -11,6 +11,8 @@ for tc in range(1,T+1):
     #         nono=0
     sum=-1
     D=0
+    if N == 1:
+        nono = 0
 
     if nono==1: #단조 증가하는 수이면
         for i in range(len(arr)-1):
@@ -22,9 +24,19 @@ for tc in range(1,T+1):
                     if D <= int(j) :
                         cnt +=1
                         D=int(j)
-                        d = arr[i]*arr[i+1]
-                        if cnt ==len(A) and sum < d:
-                            sum = d
+                        if cnt ==len(A) and sum < c:
+                            sum = c
                 D=0
+    else:
+        sum = -1
+    # else:
+    #     A=str(arr[0])
+    #     b=0
+    #     for i in A:
+    #         if b <= int(i):
+    #             b = int(i)
+    #             sum = A
+    #         if b> int(i):
+    #             sum = -1
     print(f'#{tc} {sum}')
 

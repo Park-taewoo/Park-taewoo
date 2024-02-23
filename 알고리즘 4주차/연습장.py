@@ -37,5 +37,23 @@
 # a=dic16['A']
 # print(a)
 
-a=[1,2,3,4,5,6]
-print(a[1:5])
+# print(0b11011110& 0b11011)
+# print(0x4A3| 25)
+
+# #신기한 XOR 연산
+# key = 1004
+#
+# def encode_decode(num):
+#     return num ^ key
+# print(encode_decode(1000))
+# print(encode_decode(4))
+
+t = 1
+for i in range(5):
+    print(bin(t),t)
+    t = t << 1
+
+t= 0.1
+print(f'{t:.2f}')
+
+pri
