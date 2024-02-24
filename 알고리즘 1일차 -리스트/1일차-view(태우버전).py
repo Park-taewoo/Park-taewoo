@@ -16,7 +16,7 @@ for i in range(10):
             if k > new_lst_high:
                 new_lst_high = k
     
-        if buliding_lst[j] > new_lst_high:     #양옆 두개 총 4개중 가장 높은 빌딩의 높이가 현재 빌딩의 높이보다 낮으면 뺀 값을 추가 높다면 반복문진행
+        if buliding_lst[j] > new_lst_high:     #양옆 두개의 빌딩 총 4개중 가장 높은 빌딩의 높이가 현재 빌딩의 높이보다 낮으면 뺀 값을 추가 높다면 반복문진행
             result = result + (buliding_lst[j]-new_lst_high)
         else:
             continue

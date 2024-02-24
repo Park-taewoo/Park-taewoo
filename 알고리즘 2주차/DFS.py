@@ -14,7 +14,7 @@ for row in g:
 #2. 인접 행렬에 저장하기
 adj = [[0]*(V+1) for _ in range(V+1)]
 for i in range(0,E*2,2):
-    data[i], data[i+1]
+    # data[i], data[i+1]
     adj[data[i]][data[i+1]] = 1
     adj[data[i+1]][data[i]] = 1
 for row in adj:

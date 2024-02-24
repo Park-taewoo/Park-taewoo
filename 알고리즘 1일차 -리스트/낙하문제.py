@@ -20,5 +20,21 @@ for i in range(N-1):
     if max_v < cnt:  #최대 낙차보다 크면
         max_v = cnt
 
+#다른 버전
+max_v2=0
+
+for k in range(N-1):
+    cnt2=0
+    for q in range(N):
+        if k<q:
+            if arr[k]>arr[q]:
+                cnt2+=1
+    if max_v2 <=cnt2:
+        max_v2 =cnt2
+                
+        
+
+
 
 print(max_v)  
+print(max_v2)
