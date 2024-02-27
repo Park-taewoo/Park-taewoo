@@ -54,6 +54,8 @@ def binary_search(arr,key):
         else:                  #중간값이 key보다 작은경우
             start = middle + 1
     return False #while 문을 다 돌았는데 못찾으면 False 반환
+
+
 #재귀로 하는 이진탐색 찾으면 True, 못찾으면 False
 def binary_search2(start,end,key):
     #재귀가 더이상 호출되지 않는 조건 : 못찾았을떄

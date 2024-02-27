@@ -1,29 +1,32 @@
-for test_case in range(1,11):
-    N = int(input())
-    buildings = list(map(int,input().split()))
+# 각 건물들의 조망권 확보세대 계산
+def solve():
     result = 0
- 
+    # 각 건물들의 조망권 확보세대 계산
     for i in range(2,N-2):
-        # 양쪽 2칸에 세워진 건물의 높이 리스트에 넣고
-        lst = []
-        lst.append(buildings[i - 1]) #1  2 3
-        lst.append(buildings[i - 2]) #0  1 2
-        lst.append(buildings[i + 1]) #3  4 5 
-        lst.append(buildings[i + 2]) #4  5 6
- 
-        # 그 중  가장 큰 건물 구하기
-        max_b = lst[0]
-        for j in lst:
-            if j > max_b:
-                max_b = j
- 
-        # 만약 가장 큰 건물보다 현재 건물의 높이가 높다면
-        # 현재 건물의 높이에서 가장 큰 건물을 뺸 값을 result값에 더하기
-        # 안 높으면 그냥 넘어가기
-        if buildings[i] > max_b:
-            result = result + (buildings[i] - max_b)
-        else :
-            continue
- 
+        # data[i] : i번째 건물의 높이
+        # 양쪽 2칸내에 있는 건물을 살펴보면됩니다.
+        # max_b = max(data[i-2], data[i-1], data[i+1], data[i+2])
+        # #######################################################
+        # max_b = data[i - 2]
+        # for building in [data[i - 1], data[i + 1], data[i + 2]]:
+        #    if max_b < building:
+        #        max_b = building
+        #######################################################
+        max_b = data[i-2]
+        for j in range(i-2,i+3):    #주변 건물에서 최대값 찾기
+            if j == i:  
+                continue
+            if max_b < data[j]:
+                max_b = data[j]
+        #######################################################
 
-    print(f'#{test_case} {result}')
+        # i번째 건물높이랑 주변 건물의 최고층 비교 : i번째 건물이 더 높으면 조망권이 있음
+        if data[i] > max_b:
+            result += data[i] - max_b # 조망권이 확보된 세대수
+    return result
+T = 10
+for tc in range(1,T+1):
+    N = int(input())
+    data = list(map(int,input().split()))
+    result = solve()
+    print(f'#{tc} {result}')

@@ -4,7 +4,6 @@ def solve():
     r,c= 0,0
     max_sum=0
     min_sum=999
-
     for i in range(N):
         for j in range(N):
             b=arr[i][j]
