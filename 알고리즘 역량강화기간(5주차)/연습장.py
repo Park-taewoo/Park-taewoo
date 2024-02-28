@@ -1,5 +1,3 @@
-n=4
-visted = [[0]* (n) for _ in range(n)]
-visted1 = [0]*n
-print(visted)
-print(visted1)
+arr = [1,4,2,5]
+arr.reverse()
+print(arr)
