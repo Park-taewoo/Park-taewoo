@@ -20,7 +20,8 @@ T = int(input())
 for tc in range(1, T+1):
     #D: 두 기차의 거리, A: A의 속력, B의 속력, F: 파리의 속력
     D, A, B, F = map(int,input().split())
-    T = D*F/(A+B)
+    T = D/(A+B)*F  # 두기차가 닿는데 걸린 시간 X 파리의 속력 
+
     print(f'#{tc} {T}')
 
 #<오차>에 대한 설명..

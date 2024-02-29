@@ -1,5 +1,2 @@
-for i in range(5):
-    if i ==3:
-        break
-    if i !=3:
-        print(i)
+a=[[1,2],[3,4]]
+a
