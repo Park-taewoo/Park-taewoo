@@ -2,21 +2,20 @@ def solve():
     c = N//2
     cnt = 0
     for i in range(N):
-        if 0<=i<N :
-            if i <= N//2:
-                for j in range(0,i+1):
-                    if j !=0:
-                        cnt += arr[i][c+j]
-                        cnt += arr[i][c-j]
-                    else:
-                        cnt+=arr[i][c]
-            else:
-                for j in range(N-i-1,-1,-1):
-                    if j != 0:
-                        cnt += arr[i][c + j]
-                        cnt += arr[i][c - j]
-                    else:
-                        cnt += arr[i][c]
+        if i <= N//2:
+            for j in range(0,i+1):
+                if j !=0:
+                    cnt += arr[i][c+j]
+                    cnt += arr[i][c-j]
+                else:
+                    cnt+=arr[i][c]
+        else:
+            for j in range(N-i-1,-1,-1):
+                if j != 0:
+                    cnt += arr[i][c + j]
+                    cnt += arr[i][c - j]
+                else:
+                    cnt += arr[i][c]
     return cnt
 
 

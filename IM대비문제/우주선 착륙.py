@@ -10,7 +10,7 @@ def solve():
                 c = j+d2[q]
                 if 0<=r<N and 0<=c<M and arr[i][j]>arr[r][c]:
                     cnt+=1
-            if cnt >=4:
+            if cnt ==4:
                 cnt1 +=1 
                 
     return cnt1
