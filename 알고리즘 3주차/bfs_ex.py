@@ -17,7 +17,6 @@ def bfs(start):
     visited = [0] * (V+1)
     queue = [start]
     visited[start] = 1
-
     # 경로 탐색 수행 : 발견한 경로가 더 이상 없을 때 까지..반복
     while queue:
         current = queue.pop(0)
@@ -28,6 +27,7 @@ def bfs(start):
                 queue.append(i)
                 visited[i] = 1
     print()
+bfs(1)
 # 선형큐를 이용해서 bfs 구현
 # enQueue = rear + 1
 # deQueue = front + 1
@@ -51,6 +51,7 @@ def bfs2(start):
                 queue[rear] = i
                 visited[i] = 1
     print()
+bfs2(1)
 # 정점 A에서 B정점 까지 가기 위한 최소거리?
 
 # 시작점에서 목적지 까지 걸리는 거리를 반환하는 함수
@@ -91,8 +92,8 @@ def bfs_length2(start,goal):
     return -1   # 목적지에 도달하지 못하는 경우...임의로 -1반환
 
 
-# bfs(1)
-# bfs2(1)
+
+
 result1 = bfs_length(4,3)
 result2 = bfs_length2(4,3)
 print(f'거리 :{result1}, {result2}')
