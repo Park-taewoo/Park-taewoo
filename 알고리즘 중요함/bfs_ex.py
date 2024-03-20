@@ -92,8 +92,6 @@ def bfs_length2(start,goal):
     return -1   # 목적지에 도달하지 못하는 경우...임의로 -1반환
 
 
-
-
 result1 = bfs_length(4,3)
 result2 = bfs_length2(4,3)
 print(f'거리 :{result1}, {result2}')
