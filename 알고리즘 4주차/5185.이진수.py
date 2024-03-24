@@ -12,4 +12,4 @@ T = int(input())
 for tc in range(1,T+1):
     A,B = input().split()
     result = solve()
-    print(f"#{tc} {result}")
+    print(f"#{tc} {result}")  
