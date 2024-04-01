@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>나는 DETAIL</h1>
+<hr>
+<div>
+  <p>제목 : {{ article.title }}</p>
+  <p>내용 : <br>
+    {{ article.content }}
+  </p>
+  <p>작성일 : {{ article.created_at }}</p>
+  <p>수정일 : {{ article.updated_at }}</p>
+  <p>업로드 이미지: <br>
+    {% if article.image %}
+      <img src="{{article.image.url}}" alt="이거 안나오죠?">
+    {% else %}
+    업로드된 이미지가 없습니다.
+    {% endif %}
+    
+  </p>
+  <hr>
+  <a href="{% url "articles:index" %}">[뒤로가기]</a>
+  <a href="{% url "articles:update" article.pk %}">[수정하기]</a>
+  <form action="{% url "articles:delete" article.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="삭제">
+  </form>
+  {% comment %} <a href="{% url "articles:delete" article.pk %}">[삭제하기]</a> {% endcomment %}
+
+</div>
+{% endblock content %}
