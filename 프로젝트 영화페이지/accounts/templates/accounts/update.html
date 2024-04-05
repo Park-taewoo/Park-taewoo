@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="{% url "accounts:update" %}" method="POST">
+  {% csrf_token %}
+  {{form.first_name}}
+  {{form.last_name}}
+  {{form.email}}
+  <p>비밀번호 변경을 위해서 <a href="{% url "accounts:change_password" %}">[여기]</a> 를 눌러주세요</p>
+  <input type="submit" value="수정">
+</form>
+{% endblock content %}
+
