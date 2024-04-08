@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    <!-- 장고에서 로그인을 위한 form을 만들어 둠 -->
+    {{ form.as_p }}
+    <input type="submit" value="로그인">
+  </form>
+{% endblock content %}

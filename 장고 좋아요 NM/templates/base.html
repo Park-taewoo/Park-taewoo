@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <a href="{% url "articles:index" %}"><img src="{% static "articles/img/logo.png" %}" alt="로고"></a>
+    <a href="{% url "articles:index" %}">[메인 화면]</a>
+    <a href="{% url "articles:create" %}">[새 글쓰기]</a>
+  </nav>
+  <hr>
+  {% if user.is_authenticated %}
+  <h1>{{ user }}님 반갑습니다 <a href="{% url "accounts:logout" %}">[로그아웃]</a>
+    <a href="{% url "accounts:update" %}">[회원정보수정]</a> 
+  </h1>
+  {% else %}
+  <a href="{% url "accounts:login" %}">[로그인]</a>
+  <a href="{% url "accounts:signup" %}">[회원가입]</a>
+  {% endif %}
+  <hr>
+  {% block content %}
+  {% endblock content %}
+</body>
+</html>
